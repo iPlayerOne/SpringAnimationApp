@@ -9,7 +9,7 @@ import UIKit
 import SpringAnimation
 
 class SpringViewController: UIViewController {
-
+    
     @IBOutlet var springAnimationView: SpringView!
     @IBOutlet var descriptionLabel: UILabel!
     
@@ -43,7 +43,7 @@ duration: \(String(format: "%.2f", duration ?? 0.1))
 delay: \(String(format: "%.2f", delay ?? 0.1))
 """
     }
-
+    
     @IBAction func nextToButton(_ sender: SpringButton) {
         setLabel()
         springAnimationView.animation = name ?? "fadeOut"
@@ -56,12 +56,7 @@ delay: \(String(format: "%.2f", delay ?? 0.1))
         getAnimation()
         sender.setTitle("Run \(name ?? "away")", for: .normal)
         
-        
-        
-
     }
-    
-    
     
 }
 
