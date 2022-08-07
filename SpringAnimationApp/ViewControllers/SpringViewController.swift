@@ -26,6 +26,21 @@ class SpringViewController: UIViewController {
         setLabel()
     }
     
+    
+    @IBAction func nextToButton(_ sender: SpringButton) {
+        setLabel()
+        springAnimationView.animation = name ?? "fadeOut"
+        springAnimationView.curve = curve ?? "easeOut"
+        springAnimationView.force = force ?? 0.1
+        springAnimationView.duration = duration ?? 0.1
+        springAnimationView.delay = delay ?? 0.1
+        springAnimationView.animate()
+        
+        getAnimation()
+        sender.setTitle("Run \(name ?? "away")", for: .normal)
+        
+    }
+    
     private func getAnimation() {
         name = setAnimation.animationPreset.randomElement()?.rawValue
         curve = setAnimation.animationCurve.randomElement()?.rawValue
@@ -42,20 +57,6 @@ force: \(String(format: "%.2f", force ?? 0.1))
 duration: \(String(format: "%.2f", duration ?? 0.1))
 delay: \(String(format: "%.2f", delay ?? 0.1))
 """
-    }
-    
-    @IBAction func nextToButton(_ sender: SpringButton) {
-        setLabel()
-        springAnimationView.animation = name ?? "fadeOut"
-        springAnimationView.curve = curve ?? "easeOut"
-        springAnimationView.force = force ?? 0.1
-        springAnimationView.duration = duration ?? 0.1
-        springAnimationView.delay = delay ?? 0.1
-        springAnimationView.animate()
-        
-        getAnimation()
-        sender.setTitle("Run \(name ?? "away")", for: .normal)
-        
     }
     
 }
