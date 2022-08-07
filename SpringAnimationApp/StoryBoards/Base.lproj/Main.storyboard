@@ -47,9 +47,11 @@
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                     </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Button">
+                                        <fragment content="Run">
                                             <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" size="19" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
